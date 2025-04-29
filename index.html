@@ -464,33 +464,47 @@
         height: 220px;
       }
     }
-    .after-features-flex {
+    .after-features-list-3col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2.5rem;
+      width: 100%;
+      margin: 1.2rem 0 0.7rem 0;
+      padding: 0;
+      justify-items: center;
+      align-items: stretch;
+      text-align: center;
+      list-style: none;
+      max-width: none;
+    }
+    .after-features-list-3col li {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 3rem;
+      font-size: 1.08rem;
+      color: #1a237e;
+      font-weight: 500;
+      background: #f7f9fb;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(26,35,126,0.04);
+      padding: 1.2rem 0.5rem;
+      width: 100%;
+      min-width: 0;
+      max-width: none;
+      margin: 0;
+    }
+    .after-features-btn-wrapper {
       margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-    .after-features-list {
-      margin: 0;
-    }
-    .cta-btn-wrapper {
-      display: flex;
       justify-content: center;
-      align-items: center;
-      margin: 0;
-      min-width: 220px;
+      width: 100%;
     }
     @media (max-width: 900px) {
-      .after-features-flex {
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-top: 1.2rem;
+      .after-features-list-3col {
+        grid-template-columns: 1fr;
       }
-      .cta-btn-wrapper {
-        min-width: 0;
+      .after-features-btn-wrapper {
+        margin-top: 1.2rem;
       }
     }
   </style>
@@ -522,12 +536,17 @@
         </div>
       </div>
     </section>
-    <div class="promo-description">
-      <h2>Revolutionize the Way You Manage Projects with Smart AI</h2>
-      <p>
-        Introducing <strong>MIRA</strong>, the groundbreaking AI chat assistant built exclusively for the Mastt platform. Designed to transform project management, MIRA blends smart data entry, proactive issue detection, and instant AI-powered support into one intuitive experience.<br><br>
-        MIRA isn't just another chatbot — it's the future of project support, bringing next-generation AI innovation right to your fingertips.
-      </p>
+    <div class="promo-description" style="display:flex;align-items:stretch;gap:2rem;flex-direction:row;">
+      <div style="width:50%;display:flex;align-items:center;">
+        <img src="building.jpg" alt="Modern city buildings under construction" style="width:100%;height:auto;border-radius:12px;box-shadow:0 2px 12px rgba(26,35,126,0.10);object-fit:cover;display:block;" loading="lazy">
+      </div>
+      <div style="width:50%;display:flex;flex-direction:column;justify-content:center;">
+        <h2 style="text-align:left;">Revolutionize the Way You Manage Projects with Smart AI</h2>
+        <p style="text-align:left;">
+          Introducing <strong>MIRA</strong>, the groundbreaking AI chat assistant built exclusively for the Mastt platform. Designed to transform project management, MIRA blends smart data entry, proactive issue detection, and instant AI-powered support into one intuitive experience.<br><br>
+          MIRA isn't just another chatbot — it's the future of project support, bringing next-generation AI innovation right to your fingertips.
+        </p>
+      </div>
     </div>
     <section class="features-section">
       <h2>Why MIRA is Your Ultimate Project Sidekick</h2>
@@ -567,31 +586,32 @@
         Built into Mastt's cutting-edge platform, MIRA represents a new era of AI-powered project management. Whether you're managing capital works, infrastructure projects, or complex programs, MIRA is the intelligent partner you've been waiting for.
       </p>
       <h3>Ready to Experience the Power of AI?</h3>
-      <div class="after-features-flex">
-        <ul class="after-features-list blue-bullets">
-          <li><span class="blue-dot">🔵</span> Seamless Smart Assistance</li>
-          <li><span class="blue-dot">🔵</span> Real-Time Problem Detection</li>
-          <li><span class="blue-dot">🔵</span> 24/7 AI-Driven Support</li>
-        </ul>
-        <div class="cta-btn-wrapper">
-          <a href="https://app.mastt.com.au/" class="cta-btn cta-secondary">Get Started with MIRA</a>
-        </div>
+      <ul class="after-features-list blue-bullets after-features-list-3col">
+        <li><span class="blue-dot">🤖</span> Seamless Smart Assistance</li>
+        <li><span class="blue-dot">⚡</span> Real-Time Problem Detection</li>
+        <li><span class="blue-dot">🕑</span> 24/7 AI-Driven Support</li>
+      </ul>
+      <div class="cta-btn-wrapper after-features-btn-wrapper">
+        <a href="https://app.mastt.com.au/" class="cta-btn cta-secondary">Get Started with MIRA</a>
       </div>
     </section>
     <section class="planning-section">
       <h2>Planning & Documentation</h2>
       <div class="planning-list">
         <div class="planning-card">
+          <div style="font-size:2.2rem;margin-bottom:0.5rem;">📄</div>
           <h3>Documentation</h3>
           <p>Find all the technical and user documentation for MIRA here.</p>
           <a href="https://www.notion.so/mastt/Mastt-Hackathon-April-2025-1e41f0eb73468048985cc5068004b263" class="planning-link" target="_blank" rel="noopener noreferrer">View Documentation</a>
         </div>
         <div class="planning-card">
+          <div style="font-size:2.2rem;margin-bottom:0.5rem;">🖼️</div>
           <h3>Wireframes</h3>
           <p>Explore the wireframes and design prototypes for the MIRA project.</p>
           <a href="https://www.figma.com/design/XQt8H5di5KiSjrbNIX2SVv/MIRA---Data-Entry-Assistant?node-id=0-1&p=f&t=FIrp2Qm6HGhyOnFQ-0" class="planning-link" target="_blank" rel="noopener noreferrer">View Wireframes</a>
         </div>
         <div class="planning-card">
+          <div style="font-size:2.2rem;margin-bottom:0.5rem;">📚</div>
           <h3>Other Resources</h3>  
           <p>Access additional planning materials, diagrams, and project notes.</p>
           <a href="https://www.notion.so/mastt/Mastt-Hackathon-April-2025-1e41f0eb73468048985cc5068004b263" class="planning-link" target="_blank" rel="noopener noreferrer">View Resources</a>
